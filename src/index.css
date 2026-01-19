@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+/* Bilingo Design System - Inspired by Brazilian indigenous cultures */
+
+@layer base {
+  :root {
+    /* Primary palette - Forest/Jungle green theme */
+    --background: 45 30% 97%;
+    --foreground: 150 25% 15%;
+
+    --card: 45 40% 99%;
+    --card-foreground: 150 25% 15%;
+
+    --popover: 45 40% 99%;
+    --popover-foreground: 150 25% 15%;
+
+    /* Forest green - main brand color */
+    --primary: 152 45% 28%;
+    --primary-foreground: 45 40% 98%;
+
+    /* Warm terracotta accent */
+    --secondary: 24 65% 55%;
+    --secondary-foreground: 45 40% 98%;
+
+    --muted: 45 20% 92%;
+    --muted-foreground: 150 15% 40%;
+
+    /* Earth tones accent */
+    --accent: 38 75% 55%;
+    --accent-foreground: 150 25% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 40% 98%;
+
+    --border: 45 25% 88%;
+    --input: 45 25% 88%;
+    --ring: 152 45% 28%;
+
+    --radius: 1rem;
+
+    /* Custom Bilingo tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(152 45% 28%) 0%, hsl(170 40% 35%) 50%, hsl(38 75% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(45 40% 99%) 0%, hsl(45 30% 96%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(24 65% 55%) 0%, hsl(38 75% 55%) 100%);
+    --shadow-soft: 0 4px 24px -4px hsl(150 25% 15% / 0.08);
+    --shadow-elevated: 0 12px 40px -8px hsl(150 25% 15% / 0.12);
+    --shadow-card: 0 8px 32px -6px hsl(150 25% 15% / 0.1);
+
+    --sidebar-background: 45 30% 97%;
+    --sidebar-foreground: 150 25% 15%;
+    --sidebar-primary: 152 45% 28%;
+    --sidebar-primary-foreground: 45 40% 98%;
+    --sidebar-accent: 45 20% 92%;
+    --sidebar-accent-foreground: 150 25% 15%;
+    --sidebar-border: 45 25% 88%;
+    --sidebar-ring: 152 45% 28%;
+  }
+
+  .dark {
+    --background: 150 20% 8%;
+    --foreground: 45 30% 95%;
+
+    --card: 150 18% 12%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 150 18% 12%;
+    --popover-foreground: 45 30% 95%;
+
+    --primary: 152 55% 45%;
+    --primary-foreground: 150 20% 8%;
+
+    --secondary: 24 65% 55%;
+    --secondary-foreground: 45 40% 98%;
+
+    --muted: 150 15% 18%;
+    --muted-foreground: 45 20% 65%;
+
+    --accent: 38 75% 55%;
+    --accent-foreground: 150 20% 8%;
+
+    --destructive: 0 62.8% 45%;
+    --destructive-foreground: 45 40% 98%;
+
+    --border: 150 15% 20%;
+    --input: 150 15% 20%;
+    --ring: 152 55% 45%;
+
+    --sidebar-background: 150 18% 10%;
+    --sidebar-foreground: 45 30% 95%;
+    --sidebar-primary: 152 55% 45%;
+    --sidebar-primary-foreground: 150 20% 8%;
+    --sidebar-accent: 150 15% 18%;
+    --sidebar-accent-foreground: 45 30% 95%;
+    --sidebar-border: 150 15% 20%;
+    --sidebar-ring: 152 55% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-gradient-hero {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-cta {
+    background: var(--gradient-cta);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+
+  .phone-mockup {
+    background: linear-gradient(145deg, hsl(0 0% 15%) 0%, hsl(0 0% 8%) 100%);
+    border-radius: 2.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 25px 50px -12px hsl(0 0% 0% / 0.4), inset 0 1px 1px hsl(0 0% 100% / 0.1);
+  }
+
+  .phone-screen {
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+}
