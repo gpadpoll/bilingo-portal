@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   // For GitHub Pages deployment, set base to your repo name
   // e.g., base: "/your-repo-name/" for https://username.github.io/your-repo-name/
   // Leave as "/" for custom domains or root deployment
-  base: "/",
+  base: "/bilingo-portal/",
   server: {
     host: "::",
     port: 8080,
