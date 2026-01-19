@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Mic, Puzzle, Languages } from "lucide-react";
-import speechExercise from "@/assets/speech-exercise.jpg";
-import morphemeMatch from "@/assets/morpheme-match.jpg";
-import translateSentence from "@/assets/translate-sentence.jpg";
+import speechExercise from "@/assets/speech-exercise.png";
+import morphemeMatch from "@/assets/morpheme-match.png";
+import translateSentence from "@/assets/translate-sentence.png";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const exerciseData = [
